@@ -13,13 +13,17 @@ class Board extends Component {
     super(props);
     this.state = {
       squares:Array(9).fill(null),
+      playerOne:true,
     }
   }
 
   handleClick(i) {
     const squares = this.state.squares.slice();
-    squares[i] = 'X';
-    this.setState({squares: squares});
+    squares[i] = this.state.playerOne ? 'X' : 'O';
+    this.setState({
+      squares: squares,
+      playerOne: !this.state.playerOne,
+    });
   }
 
   renderSquare(i) {
@@ -31,7 +35,7 @@ class Board extends Component {
   }
 
   render() {
-    const status = 'Next player: X';
+    const status = 'Next player: ' + (this.state.playerOne ? 'X' : 'O');
 
     return (
       <div>
