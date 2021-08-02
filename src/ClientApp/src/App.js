@@ -4,7 +4,7 @@ import { Layout } from './components/Layout';
 import { Home } from './components/Home';
 import { Game } from './components/Game';
 import { FetchData } from './components/FetchData';
-import { Dummy } from './components/Dummy';
+import { WebLink } from './components/WebLink';
 import { Counter } from './components/Counter';
 
 import './custom.css'
@@ -19,7 +19,7 @@ export default class App extends Component {
         <Route path='/counter' component={Counter} />
         <Route path='/game' component={Game} />
         <Route path='/fetch-data' component={FetchData} />
-        <Route path='/dummy' component={Dummy} />
+        <Route path='/link' component={WebLink} />
       </Layout>
     );
   }

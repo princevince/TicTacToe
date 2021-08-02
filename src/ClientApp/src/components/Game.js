@@ -110,7 +110,7 @@ export class Game extends Component {
         'Go to game start';
       return (
         <li key={move}>
-          <button class onClick={() => this.jumpTo(move)}>{desc}</button>
+          <button onClick={() => this.jumpTo(move)}>{desc}</button>
         </li>
       );
     });
